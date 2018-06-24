@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+ <head>
+    <meta charset="utf-8">
+    <title>Gestion Documentaria</title>
+    <!-- Icons-->
+    <link href="/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href="/css/style.css" rel="stylesheet">
+  </head>
+  {{#if usuario}}
+  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <header class="app-header navbar">
+      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img class="navbar-brand-full" src="/img/brand/logo.svg" width="89" height="25" alt="Proyecto Logo">
+        <img class="navbar-brand-minimized" src="/img/brand/sygnet.svg" width="30" height="30" alt="Proyecto Logo">
+      </a>
+      <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="nav navbar-nav d-md-down-none">
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Construccion menu</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Configuracion</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <img class="img-avatar" src="/img/avatars/6.jpg" alt="">
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-header text-center">
+              <strong>Configuracion</strong>
+            </div>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-user"></i> {{usuario.username}}</a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-user"></i> Perfil</a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-wrench"></i> Configuracion</a>
+            <a class="dropdown-item" href="/users/logout">
+              <i class="fa fa-lock"></i> Logout</a>
+          </div>
+        </li>
+      </ul>
+      <button class="navbar-toggler aside-menu-toggler d-md-down-none" type="button" data-toggle="aside-menu-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button class="navbar-toggler aside-menu-toggler d-lg-none" type="button" data-toggle="aside-menu-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        
+    </header>
+    
+    <div class="app-body">
+    <div class="sidebar">
+    <nav class="sidebar-nav">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="nav-icon icon-speedometer"></i> Construccion menu
+                <span class="badge badge-primary">NUEVO</span>
+              </a>
+            </li>
+            <li class="nav-title">Componentes</li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-cursor"></i> Botones</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon icon-cursor"></i> Prueba modal</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-star"></i> Iconos</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon icon-star"></i> Prueba modal
+                    <span class="badge badge-success">NUEVO</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon icon-star"></i> Prueba
+                    <span class="badge badge-secondary">4.7</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-bell"></i> Notificaciones</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon icon-bell"></i> Prueba Modal</a>
+                </li>
+              </ul>
+            </li>
+            <li class="divider"></li>
+            <li class="nav-title">Extras</li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-star"></i> Para la pagina</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="#" target="_top">
+                    <i class="nav-icon icon-star"></i> Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" target="_top">
+                    <i class="nav-icon icon-star"></i> Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" target="_top">
+                    <i class="nav-icon icon-star"></i> Error 404</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" target="_top">
+                    <i class="nav-icon icon-star"></i> Error 500</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        
+        <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+      </div> 
+      <main class="main">
+        <!-- Breadcrumb-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Inicio</li>
+          <li class="breadcrumb-item">
+            <a href="#">Admin</a>
+          </li>
+          <li class="breadcrumb-item active">Construccion menu</li>
+          <!-- Breadcrumb Menu Dashaboard-->
+          <li class="breadcrumb-menu d-md-down-none">
+            <div class="btn-group" role="group" aria-label="Button group">
+              <a class="btn" href="#">
+                <i class="icon-settings"></i> Configuracion</a>
+            </div>
+          </li>
+        </ol>
+        {{/if}} 
+        {{{body}}}
+        {{#if usuario}}
+      </main>
+      <aside class="aside-menu">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#timeline" role="tab">
+              <i class="icon-list"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#messages" role="tab">
+              <i class="icon-speech"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#settings" role="tab">
+              <i class="icon-settings"></i>
+            </a>
+          </li>
+        </ul>
+        <!-- Tab panes-->  
+      </aside>
+    </div>
+    <footer class="app-footer">
+      <div>
+        <a href="#">Gestion de proyectos</a>
+        <span>&copy; 2018.</span>
+      </div>
+      <div class="ml-auto">
+        <span>Powered by</span>
+        <a href="#">Grupo 5</a>
+      </div>
+    </footer>
+    {{/if}} 
+    <!-- Bootstrap and necessary plugins-->
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/pace-progress/pace.min.js"></script>
+    <script src="/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="/@coreui/coreui/dist/js/coreui.min.js"></script>
+    <!-- Plugins and scripts required by this view
+    <script src="/chart.js/dist/Chart.min.js"></script>
+    <script src="/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js"></script>
+    <script src="/js/main.js"></script>-->
+    </div><!---fin del containes-->
+  </body>
+  
+</html>
